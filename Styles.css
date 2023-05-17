@@ -67,7 +67,11 @@
     outline: none;
 }
 
-#map {
+#Home{
+    color:rgb(0, 0, 0);
+}
+
+#map{
     position: absolute;
     left: 0px;
     top: 0px;
