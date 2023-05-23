@@ -35,6 +35,12 @@
                 }).addTo(map);
             </script>
             <script>
+                var OS = L.tileLayer('https://api.os.uk/maps/vector/v1/vts?key=HwIu7Cvd48dY0SGXBsbGISxHqYDFGwtq', {
+                maxZoom: 19, minZoom: 7,
+                attribution: 'Ordnance Survey OpenData'
+                }).addTo(map);
+            </script>
+            <script>
                 var Style = {
                     "color": "#309912",
                     "opacity": "0.4"
@@ -78,6 +84,7 @@
                  var BaseMaps = {
                 "Open Street Map": OSM,
                 "World Imagery": Esri_WorldImagery,
+                "Ordnance Survey Vector Tiles": OS,
                 };
 
                 var OverlayMaps = {
