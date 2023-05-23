@@ -37,12 +37,7 @@
             <script>
                 const APIKey = 'HwIu7Cvd48dY0SGXBsbGISxHqYDFGwtq';
                 const gl = L.maplibreGL({
-                style: 'https://api.os.uk/maps/vector/v1/vts/resources/styles?key=' + apiKey,
-                transformRequest: url => {
-                return {
-                url: url += '&srs=3857'
-                }
-                }
+                style: 'https://api.os.uk/maps/vector/v1/vts/tile/%7Bz%7D/%7By%7D/%7Bx%7D.pbf?srs=3857&key=' + apiKey,
                 }).addTo(map);
             </script>
             <script>
