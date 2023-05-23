@@ -35,7 +35,8 @@
                 }).addTo(map);
             </script>
             <script>
-                var OS = L.tileLayer('https://api.os.uk/maps/vector/v1/vts?key=HwIu7Cvd48dY0SGXBsbGISxHqYDFGwtq', {
+                const APIKey = 'HwIu7Cvd48dY0SGXBsbGISxHqYDFGwtq';
+                var OS = L.tileLayer('https://api.os.uk/maps/vector/v1/vts?key=' + APIKey, {
                 maxZoom: 19, minZoom: 7,
                 attribution: 'Ordnance Survey OpenData'
                 }).addTo(map);
