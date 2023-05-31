@@ -35,9 +35,8 @@
                 }).addTo(map);
             </script>
             <script>
-                var OS = L.tileLayer('https://api.os.uk/maps/raster/v1/wmts?key=HwIu7Cvd48dY0SGXBsbGISxHqYDFGwtq', {
-                maxZoom: 19, minZoom: 7,
-                }).addTo(map);
+                var OSURL = "https://api.os.uk/maps/vector/v1/vts?key=HwIu7Cvd48dY0SGXBsbGISxHqYDFGwtq":
+                var OS = L.vectorGrid.protobuf(OSURL).addTo(map);
             </script>
             <script>
                 var Style = {
