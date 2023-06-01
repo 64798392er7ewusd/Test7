@@ -21,7 +21,12 @@
             <br>
         </div>   
         <div id="Buttonsection">
-            <button type="button" id="login-submit" onclick="window.location.href='./Map.html';">Enter</button>
+            <button type="button" id="login-submit" onclick="LoginFunction()">Enter</button>
+            <script>
+                if (document.getElementById("Username") === 'edward' && document.getElementById("Password") === 'wilkes'){
+                    window.location.href='./Map.html';
+                }
+            </script>
         </div>
         </div>
         <br>
