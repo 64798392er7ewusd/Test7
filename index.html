@@ -21,13 +21,17 @@
             <br>
         </div>   
         <div id="Buttonsection">
-            <button type="button" id="login-submit" onclick="LoginFunction()">Enter</button>
+            <button type="button" id="login-submit">Enter</button>
             <script>
-                function LoginFunction() {
-                if (document.getElementById('Password').value === "test"){
-                    window.location.href='./Map.html';
-                }
-             }
+               var u = document.getElementById('Username');
+               var buttonsubmit = document.getElementById('button');
+               buttonsubmit.addEventListener('click', function() {
+               if (u.value === "New York") {
+                  window.location.href='./Map.html';
+               } else {
+                  console.log("Wrong");
+               }
+               });
             </script>
         </div>
         </div>
