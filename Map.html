@@ -13,6 +13,7 @@
         <script src="./LondonGreenbelt.js"></script>
         <script src="./Boroughs.js"></script>
         <script src="./CentralActivityZone.js"></script>
+        <script src="./Postboxes.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.9.0/proj4.js" integrity="sha512-lO8f7sIViqr9x5VE6Q72PS6f4FoZcuh5W9YzeSyfNRJ9z/qL3bkweiwG6keGzWS0BQzNDqAWXdBhYzFD6KffIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
     </head>
@@ -52,7 +53,14 @@
                     "color": "#ffaa00",
                     "opacity": "1"
                 }
-                var CentralZone = L.geoJSON(CAZ, {style: zonestyle}).addTo(map)
+                var CentralZone = L.geoJSON(CAZ, {style: zonestyle}).addTo(map);
+            </script>
+            <script>
+                var postboxstyle = {
+                    "color": "#ffaa00",
+                    "opacity": "1"
+                }
+                var PostyBoxes = L.geoJSON(PostBoxes, {style: postboxstyle}).addTo(map);
             </script>
             <script>
             var Boroughs = L.geoJSON(Boroughs, {
@@ -90,7 +98,8 @@
                 var OverlayMaps = {
                     "London Boroughs":Boroughs,
                     "Central Activities Zones":CentralZone,
-                    "Greenbelts":Greenbelts
+                    "Greenbelt":Greenbelts
+                    "Post Boxes":PostyBoxes
                 };
 
                 var layerControl = L.control.layers(BaseMaps, OverlayMaps).addTo(map);
@@ -98,6 +107,8 @@
                 Boroughs.setZIndex(3);
                 CentralZone.setZIndex(2);
                 Greenbelts.setZIndex(1);
+                PostyBoxes.setZIndex(4);
+                
 
             </script>
             <script>
