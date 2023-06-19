@@ -63,6 +63,12 @@
                 var PostyBoxes = L.geoJSON(PostBoxes, {style: postboxstyle}).addTo(map);
             </script>
             <script>
+                map.on('zoomend', function(zoomextent){
+                    if ( map.getZoom() > 4 ){map.removeLayer( PostyBoxes )}
+                    else if ( map.getZoom() <=4 ){map.removeLayer( PostyBoxes)}
+                });
+            </script>
+            <script>
             var Boroughs = L.geoJSON(Boroughs, {
                 onEachFeature: function (feature, layer) {
                     layer.on('mouseover', function () {
