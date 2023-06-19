@@ -56,12 +56,11 @@
                 var CentralZone = L.geoJSON(CAZ, {style: zonestyle}).addTo(map);
             </script>
             <script>
-                var Postboxstyle = L.icon({
-                    iconUrl:"./PostboxIcon.png",
-                    
-                    iconSize: [30, 8],
-                })
-                var PostyBoxes = L.geoJSON(PostBoxes, {icon: Postboxstyle}).addTo(map);
+                var Postboxstyle = {
+                    "color": "#ffaa00",
+                    "opacity": "1"
+                }
+                var PostyBoxes = L.geoJSON(PostBoxes, {style: Postboxstyle}).addTo(map);
             </script>
             <script>
             var Boroughs = L.geoJSON(Boroughs, {
