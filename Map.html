@@ -64,8 +64,8 @@
             </script>
             <script>
                 map.on('zoomend', function(zoomextent){
-                    if ( map.getZoom() > 4 ){map.removeLayer( PostyBoxes )}
-                    else if ( map.getZoom() <=4 ){map.removeLayer( PostyBoxes)}
+                    if ( map.getZoom() > 4 ){map.removeLayer(PostyBoxes)}
+                    else if ( map.getZoom() <=4 ){map.addLayer(PostyBoxes)}
                 });
             </script>
             <script>
@@ -104,8 +104,8 @@
                 var OverlayMaps = {
                     "London Boroughs":Boroughs,
                     "Central Activities Zones":CentralZone,
-                    "Greenbelt":Greenbelts
-                    "Post Boxes":PostyBoxes
+                    "Greenbelt":Greenbelts,
+                    "Post Boxes":PostyBoxes,
                 };
 
                 var layerControl = L.control.layers(BaseMaps, OverlayMaps).addTo(map);
