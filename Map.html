@@ -45,7 +45,7 @@
                     "color": "#309912",
                     "opacity": "0.4"
                     };
-                var Greenbelts = L.geoJSON(LondonGreenbelt, {style: Style}).addTo(map);
+                var Greenbelts = L.geoJSON(LondonGreenbelt, {style: Style}).addTo(map).BindTooltip('This is Greenbelt land!');
             </script>
             <script>
                 var zonestyle = {
@@ -68,7 +68,7 @@
                             });
                         }); 
                     }
-                }).addTo(map).bindTooltip(feature.properties.v2_number.toString(), {direction: "center", permanent: true, className: 'labelstyle'}'Test');
+                }).addTo(map);
             </script>
             <script>
                 var Arupicon = L.icon({
