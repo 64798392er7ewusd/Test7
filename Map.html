@@ -68,7 +68,7 @@
                             });
                         }); 
                     }
-                }).addTo(map).bindTooltip('Test');
+                }).addTo(map).bindTooltip(feature.properties.v2_number.toString(), {direction: "center", permanent: true, className: 'labelstyle'}'Test');
             </script>
             <script>
                 var Arupicon = L.icon({
