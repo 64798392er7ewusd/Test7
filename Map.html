@@ -46,7 +46,6 @@
                     "opacity": "0.4"
                     };
                 var Greenbelts = L.geoJSON(LondonGreenbelt, {style: Style}).addTo(map);
-                Greenbelts.bindTooltip("This is Greenbelt land!");
             </script>
             <script>
                 var zonestyle = {
@@ -56,17 +55,20 @@
                 var CentralZone = L.geoJSON(CAZ, {style: zonestyle}).addTo(map);
             </script>
             <script>
+            Boroughs.bindPopup("Test")
             var Boroughs = L.geoJSON(Boroughs, {
                 onEachFeature: function (feature, layer) {
                     layer.on('mouseover', function () {
                         this.setStyle({
                             'fillColor': '#ffffff',
-                            });
+                            })
+                        this.openPopup();
                         });   
                     layer.on('mouseout', function () {
                         this.setStyle({
                             'fillColor': '#3984e6',
                             });
+                        this.closePopup();
                         }); 
                     }
                 }).addTo(map);
