@@ -46,10 +46,10 @@
                     "opacity": "0.4"
                     };
                 var Greenbelts = L.geoJSON(LondonGreenbelt, {style: Style}).addTo(map);
-                Greenbelts.bindPopup("Test")
+                Greenbelts.bindPopup("Test");
                 Greenbelts.on('mouseover', function(e){
                     this.openPopup();
-                })
+                });
                 Greenbelts.on('mouseout', function(e){
                     this.closePopup();
                 });
