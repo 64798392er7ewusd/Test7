@@ -49,7 +49,7 @@
                 Greenbelts.on('mouseover', function(e){
                     var popup = L.popup()
                     .setLatLng(e.latlng)
-                    .setContent('Test')
+                    .setContent(feature.properties.name)
                     .openOn(map);
                 });
                 Greenbelts.on('mouseout', function(e){
